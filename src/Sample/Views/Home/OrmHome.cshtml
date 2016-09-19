@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Micro ORM with Dapper - Home";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    
+</div>
+
+<div class="row">
+    <h1>ORM Using Dapper and its features</h1>
+    <ol>
+        <li><a href="/home/Employee">Get all Employees</a></li>
+        <li><a href="/home/EmployeeDetail/1">Find Employees </a></li>
+        <li><a href="/home/EmployeeDetails?ids=1,2,3">Get all Employees by Ids </a></li>
+        <li><a href="/home/StoredProcedure/3">Get Employees using Stored Procedure</a></li>
+        <li><a href="/home/Views/1">Get Employees using View</a></li>
+        <li><a href="/home/EmployeePaged/">Get Employees using Paged Result</a></li>
+    </ol>
+</div>

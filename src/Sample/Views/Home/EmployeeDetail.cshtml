@@ -1,0 +1,53 @@
+﻿@using System.Linq
+@using MicroORMWithDapper
+@model Employee
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    
+</div>
+
+<div class="row">
+    <h1>ORM Using Dapper and its features</h1>
+    <table style="width:99%; background-color:#FFFFFF; padding:5px;width:99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+            <td width="40" align="center"><b>Employee ID</b></td>
+            <td width="100" align="center"><b>Employee Name </b></td>
+            <td width="120" align="center"><b>Employee Designation</b></td>
+            <td width="220" align="center"><b>Address</b></td>
+        </tr>
+        <tbody>
+            <tr>
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @Model?.Id
+                    </span>
+                </td>
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @Model?.Name
+                    </span>
+                </td>
+                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @Model?.Designation
+                    </span>
+                </td>
+                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        @Model.Address?.FirstOrDefault()?.Address
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+</div>
